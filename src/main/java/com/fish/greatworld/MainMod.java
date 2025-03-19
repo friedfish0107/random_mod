@@ -1,7 +1,5 @@
 package com.fish.greatworld;
 
-import java.util.Properties;
-
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +20,8 @@ public class MainMod {
                .durability(32)
                .setNoRepair()));
 
-   public static final RegistryObject<Item> AAA = ITEMS.register("aaa", () -> new Item(new Item.Properties()));
+   public static final RegistryObject<Item> AAA = ITEMS.register("aaa",
+         () -> new Item(new Item.Properties().durability(32)));
 
    @SuppressWarnings("removal")
    public MainMod() {
