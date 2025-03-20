@@ -12,20 +12,20 @@ import net.minecraftforge.registries.RegistryObject;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("greatworld")
 public class MainMod {
-   public static final String MODID = "greatworld";
-   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final String MODID = "greatworld";
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-   public static final RegistryObject<Item> DIRT_BAG = ITEMS.register("dirt_bag",
-         () -> new BlockBagItem(Blocks.DIRT, new Item.Properties()
-               .durability(32)
-               .setNoRepair()));
+    public static final RegistryObject<Item> DIRT_BAG = ITEMS.register("dirt_bag",
+            () -> new BlockBagItem(Blocks.DIRT, new Item.Properties()
+                    .durability(256)
+                    .setNoRepair()));
 
-   public static final RegistryObject<Item> AAA = ITEMS.register("aaa",
-         () -> new Item(new Item.Properties().durability(32)));
+    public static final RegistryObject<Item> AAA = ITEMS.register("aaa",
+            () -> new Item(new Item.Properties().durability(32)));
 
-   @SuppressWarnings("removal")
-   public MainMod() {
-      IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-      ITEMS.register(modEventBus);
-   }
+    @SuppressWarnings("removal")
+    public MainMod() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ITEMS.register(modEventBus);
+    }
 }
